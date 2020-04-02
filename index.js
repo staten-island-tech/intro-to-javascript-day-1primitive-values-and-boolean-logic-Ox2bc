@@ -37,7 +37,7 @@ if(school === "Elementary"){
 */
 
 //Formative Assesment #1
-let light = "green";
+/* let light = "green";
 if (light === "green"){
     console.log("Go");
 } else if (light === "yellow"){
@@ -68,4 +68,103 @@ if (temp < 68) {
 } else {
     console.log("It is too hot");
 }
+ */
 
+ /////Functions 3/27/20
+/* 
+ function test () {
+     console.log("test");
+ }
+ test(); */
+
+ /* function argument(parameter, parameter2) {
+     console.log(parameter, parameter2)
+ }
+ argument("val", "eric"); */
+
+/*  const add = function(x, y){
+     return x + y;
+ }
+ console.log(add(10, 3)) */
+
+/*  const hello = function () {
+     alert("hello");
+ };
+ const bye = function() {
+     alert("bye");
+ }; 
+
+ const beatles = function() {
+    hello();
+    bye();
+    hello();
+    bye();
+ };
+ beatles(); */
+
+ ///scope
+/* const name = "Michael";
+ function makeFunc() {
+     const name = "Anna";
+     function displayName() {
+         console.log(name);
+     }
+     return displayName;
+ }
+const myFunc = makeFunc();
+myFunc();
+ */
+
+///arrays
+/* const names = ["Diego", "Frid", "Christian", "Anna", "Haoran"];
+ names.push("Caroline")
+let newNames = names.unshift("Brian"); 
+names.forEach(name => console.log(name)); */
+
+///spread operator 
+/* const numbers = [1, 2, 3, 4, 5];
+
+const add = function(x, y, z, a, g  ) {
+    return x + y + z + a + g;
+};
+console.log(add(...numbers)); */
+
+
+//Challenges for lesson 2
+/*Using the array filter out all students whose names contain
+less than 5 characters*/
+/*let students = [
+    {Name: "Riya", letters: 4}, 
+    {Name: "Omor", letters: 4}, 
+    {Name: "Alan", letters: 4}, 
+    {Name: "Jaiyu", letters: 5}, 
+    {Name: "Michael", letters: 7}, 
+    {Name: "Lisa", letters: 4},
+    {Name: "Richard", letters: 7}
+];
+let selectStudents = []
+for (let i = 0; i < students.length; i++) {
+    if (students[i].letters > 5) {
+        selectStudents.push(students[i]);
+    }
+}
+console.log(selectStudents);
+*/
+let students = ["Riya", "Omor", "Alan", "Jaiyu", "Michael", "Lisa",
+"Richard"];
+const result = students.filter(students => students.length > 4);
+console.log(result);
+//-------------------------------------------------------------------------------------------------
+/*let students = ["Riya", "Omor", "Alan", "Jaiyu", "Michael", "Lisa",
+"Richard"];
+Using the above array check to see if the array “includes” “junshen”
+Write a seperate function to check if “Alan” or “Savva” were included
+in “some” of the array
+USE MDN to find the appropriate array methods*/
+//1)
+console.log(students.includes("junshen"));
+//2)
+const Savva = (element) => element === "Savva";
+console.log(students.some(Savva));
+const Alan = (element) => element === "Alan";
+console.log(students.some(Alan));
